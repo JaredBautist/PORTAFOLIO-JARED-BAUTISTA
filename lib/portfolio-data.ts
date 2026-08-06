@@ -40,6 +40,13 @@ export interface TechnologyItem {
   readonly color: string;
 }
 
+export interface TechnologyGroup {
+  readonly title: string;
+  readonly description: string;
+  readonly items: readonly TechnologyItem[];
+  readonly practices?: readonly string[];
+}
+
 export const contactLinks = {
   cv: "/documents/Jared-Bautista-CV.pdf",
   email: "mailto:balckyfureu@gmail.com",
@@ -53,11 +60,11 @@ export const deployedProjects = [
   {
     slug: "coworking-management",
     title: "Coworking Management Platform",
-    category: "SaaS multi-tenant · Technical challenge",
+    category: "SaaS multi-tenant · PrimeWorks LLC",
     summary:
-      "Plataforma para coordinar reservas, disponibilidad y uso de espacios compartidos entre empresas, con calendario, reportes y control de acceso.",
+      "Herramienta SaaS desarrollada para PrimeWorks LLC que centraliza el agendamiento, la disponibilidad y el uso de espacios de coworking entre empresas.",
     contribution:
-      "Diseño de producto, arquitectura frontend, modelo de datos y entrega integral de un prototipo funcional en 72 horas.",
+      "Creación integral del producto: experiencia de reserva, arquitectura frontend, modelo de datos, calendario, reportes y control de acceso.",
     technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL", "RLS"],
     image: "/projects/coworking.webp",
     imageAlt: "Pantalla de acceso de Coworking Management Platform en tema oscuro",
@@ -119,12 +126,12 @@ export const deployedProjects = [
   {
     slug: "jenny-bautista-portfolio",
     title: "Portafolio Jenny Bautista",
-    category: "Marca profesional · Psicoterapia",
+    category: "Marca profesional · Psicoterapia & SEO",
     summary:
-      "Portafolio profesional que presenta servicios, formación, precios y una ruta clara para agendar una consulta de psicoterapia.",
+      "Presencia digital para una psicoterapeuta que organiza servicios, formación y precios con una ruta clara hacia la consulta.",
     contribution:
-      "Diseño y desarrollo de una experiencia cálida, accesible y orientada a generar confianza antes del primer contacto.",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vercel"],
+      "Diseño, desarrollo y base de posicionamiento on-page mediante arquitectura de contenido, metadatos descriptivos, experiencia accesible y conversión a contacto.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "SEO on-page", "Vercel"],
     image: "/projects/jenny.webp",
     imageAlt: "Página principal en tonos menta del portafolio profesional de Jenny Bautista",
     liveUrl: "https://portafoliojennybautista.vercel.app/",
@@ -215,7 +222,7 @@ export const education = [
   },
 ] as const satisfies readonly EducationEntry[];
 
-export const technologyGroups = [
+export const technologyGroups: readonly TechnologyGroup[] = [
   {
     title: "Frontend & Product UI",
     description: "Interfaces rápidas, accesibles y con una identidad visual deliberada.",
@@ -257,6 +264,39 @@ export const technologyGroups = [
       { name: "GitHub Actions", icon: "githubactions", color: "#2088FF" },
       { name: "Vercel", icon: "vercel", color: "#111827" },
     ],
+  },
+  {
+    title: "Auditoría, accesibilidad & SEO",
+    description: "Calidad medible, descubribilidad y validación técnica antes y después de publicar.",
+    items: [
+      { name: "Lighthouse", icon: "lighthouse", color: "#F44B21" },
+      { name: "Google Search Console", icon: "searchconsole", color: "#458CF5" },
+      { name: "Wappalyzer", icon: "wappalyzer", color: "#32067C" },
+      { name: "Google Keyword Planner", icon: "google", color: "#4285F4" },
+    ],
+    practices: [
+      "TAW Accessibility",
+      "WAVE Accessibility",
+      "SEO técnico",
+      "robots.txt & sitemap.xml",
+      "Canonical URLs",
+      "Structured Data (Schema.org)",
+      "Rich Results Test",
+      "hreflang",
+      "Open Graph & Meta Tags",
+      "Revisión del DOM con Antigravity + IA",
+      "Simulación de casos de uso con IA",
+    ],
+  },
+  {
+    title: "Productividad & planificación",
+    description: "Herramientas para convertir requisitos, prioridades y seguimiento en entregas trazables.",
+    items: [
+      { name: "Notion", icon: "notion", color: "#111827" },
+      { name: "Trello", icon: "trello", color: "#0052CC" },
+      { name: "Jira", icon: "jira", color: "#0052CC" },
+    ],
+    practices: ["Backlogs y priorización", "Historias de usuario", "Documentación técnica", "Tableros ágiles", "Trazabilidad de tareas"],
   },
 ] as const;
 

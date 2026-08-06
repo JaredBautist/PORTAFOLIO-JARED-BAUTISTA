@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { useLanguage } from "@/components/portfolio/language-provider";
 import { contactLinks } from "@/lib/portfolio-data";
 
-function ThemeToggle() {
+export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const { copy } = useLanguage();
   const isDark = resolvedTheme === "dark";
@@ -25,7 +25,7 @@ function ThemeToggle() {
   );
 }
 
-function LanguageSelector() {
+export function LanguageSelector() {
   const { copy, language, setLanguage } = useLanguage();
   return (
     <div className="language-selector" role="group" aria-label={copy.navigation.languageLabel}>

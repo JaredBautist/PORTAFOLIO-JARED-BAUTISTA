@@ -62,6 +62,17 @@ deployed to Vercel without a custom backend.
 21. WHEN the language control is displayed on desktop or mobile, the system SHALL show
     explicit ES and EN labels, expose its selected state semantically, and remain fully
     operable by keyboard.
+22. WHEN Coworking Management Platform is presented, the system SHALL identify it as a
+    SaaS product created for PrimeWorks LLC to manage workspace scheduling,
+    availability, and usage, and SHALL NOT frame it as a technical challenge or
+    emphasize a 72-hour delivery window.
+23. WHEN the technology section is displayed, the system SHALL distinguish engineering
+    technologies from audit, accessibility, technical SEO, AI-assisted validation, and
+    productivity practices without reducing the section to an unstructured logo wall.
+24. WHEN the Jenny Bautista project is presented, the system SHALL highlight its
+    verified on-page metadata, content architecture, accessible experience, and contact
+    path without claiming ranking outcomes or SEO artifacts not present in the public
+    deployment.
 
 ## Content Language
 
@@ -77,4 +88,5 @@ deployed to Vercel without a custom backend.
 - A CMS, database, authentication, or admin panel.
 - Publishing private clinical repositories or patient information.
 - Inventing employment dates, performance metrics, certificates, or client outcomes.
+- Inventing search-ranking results, accessibility scores, or audit outcomes.
 - Deploying to Vercel before a destination account/project is supplied.

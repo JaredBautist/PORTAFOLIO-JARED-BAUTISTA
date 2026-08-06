@@ -7,6 +7,7 @@ import { PortfolioFooter } from "@/components/portfolio/portfolio-footer";
 import { ProjectsSection } from "@/components/portfolio/projects-section";
 import { ToolkitSection } from "@/components/portfolio/toolkit-section";
 import { WorkflowSection } from "@/components/portfolio/workflow-section";
+import { TeachingTeaser } from "@/components/teaching/teaching-teaser";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <ToolkitSection />
         <WorkflowSection />
         <EducationSection />
+        <TeachingTeaser />
         <ContactSection />
       </main>
       <PortfolioFooter />

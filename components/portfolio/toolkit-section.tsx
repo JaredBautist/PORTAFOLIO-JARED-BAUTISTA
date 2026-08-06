@@ -9,8 +9,12 @@ import {
   SiExpress,
   SiGit,
   SiGithubactions,
+  SiGoogle,
+  SiGooglesearchconsole,
   SiHtml5,
   SiJavascript,
+  SiJira,
+  SiLighthouse,
   SiLinux,
   SiMui,
   SiMysql,
@@ -18,13 +22,16 @@ import {
   SiNextdotjs,
   SiNginx,
   SiNodedotjs,
+  SiNotion,
   SiPostgresql,
   SiPython,
   SiReact,
   SiTailwindcss,
+  SiTrello,
   SiTypescript,
   SiVercel,
   SiVite,
+  SiWappalyzer,
 } from "react-icons/si";
 import { TbSql } from "react-icons/tb";
 import { useLanguage } from "@/components/portfolio/language-provider";
@@ -40,8 +47,11 @@ const iconMap: Record<string, IconType> = {
   express: SiExpress,
   git: SiGit,
   githubactions: SiGithubactions,
+  google: SiGoogle,
   html: SiHtml5,
   javascript: SiJavascript,
+  jira: SiJira,
+  lighthouse: SiLighthouse,
   linux: SiLinux,
   mui: SiMui,
   mysql: SiMysql,
@@ -49,14 +59,18 @@ const iconMap: Record<string, IconType> = {
   nextjs: SiNextdotjs,
   nginx: SiNginx,
   node: SiNodedotjs,
+  notion: SiNotion,
   postgresql: SiPostgresql,
   python: SiPython,
   react: SiReact,
+  searchconsole: SiGooglesearchconsole,
   sqlserver: TbSql,
   tailwind: SiTailwindcss,
+  trello: SiTrello,
   typescript: SiTypescript,
   vercel: SiVercel,
   vite: SiVite,
+  wappalyzer: SiWappalyzer,
 };
 
 /** Groups the verified stack by engineering concern and renders accessible brand marks. */
@@ -101,7 +115,7 @@ export function ToolkitSection() {
                   );
                 })}
               </ul>
-              {"practices" in group && (
+              {group.practices && group.practices.length > 0 && (
                 <ul className="practice-chips" aria-label={`${toolkit.practices} ${group.title}`}>
                   {group.practices.map((practice) => <li key={practice}>{practice}</li>)}
                 </ul>

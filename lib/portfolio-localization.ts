@@ -17,9 +17,9 @@ type ProjectCopy = Pick<PortfolioProject, "category" | "summary" | "contribution
 
 const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
   "coworking-management": {
-    category: "Multi-tenant SaaS · Technical challenge",
-    summary: "A platform for coordinating bookings, availability, and shared workspace usage across companies, including calendars, reports, and access control.",
-    contribution: "Product design, frontend architecture, data model, and end-to-end delivery of a functional prototype in 72 hours.",
+    category: "Multi-tenant SaaS · PrimeWorks LLC",
+    summary: "A SaaS product developed for PrimeWorks LLC that centralizes booking, availability, and shared workspace usage across companies.",
+    contribution: "End-to-end product creation: booking experience, frontend architecture, data model, calendar, reporting, and access control.",
     imageAlt: "Dark-themed sign-in screen for Coworking Management Platform",
   },
   metropizza: {
@@ -41,9 +41,9 @@ const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
     imageAlt: "Green and cream digital menu for MetroPizza Pinar del Río",
   },
   "jenny-bautista-portfolio": {
-    category: "Professional brand · Psychotherapy",
-    summary: "Professional portfolio presenting services, education, pricing, and a clear path to schedule a psychotherapy consultation.",
-    contribution: "Design and development of a warm, accessible experience focused on building trust before the first contact.",
+    category: "Professional brand · Psychotherapy & SEO",
+    summary: "A digital presence for a psychotherapist that organizes services, education, and pricing around a clear path to consultation.",
+    contribution: "Design, development, and an on-page positioning foundation through content architecture, descriptive metadata, an accessible experience, and contact conversion.",
     imageAlt: "Mint-colored home page of Jenny Bautista's professional portfolio",
   },
   axolot: {
@@ -114,6 +114,28 @@ const englishTechnologyGroupCopy = [
     title: "Data, Cloud & Delivery",
     description: "Reliable data and repeatable delivery from development to production.",
   },
+  {
+    title: "Auditing, accessibility & SEO",
+    description: "Measurable quality, discoverability, and technical validation before and after release.",
+    practices: [
+      "TAW Accessibility",
+      "WAVE Accessibility",
+      "Technical SEO",
+      "robots.txt & sitemap.xml",
+      "Canonical URLs",
+      "Structured Data (Schema.org)",
+      "Rich Results Test",
+      "hreflang",
+      "Open Graph & Meta Tags",
+      "AI-assisted DOM review with Antigravity",
+      "AI-assisted use-case simulation",
+    ],
+  },
+  {
+    title: "Productivity & planning",
+    description: "Tools for turning requirements, priorities, and tracking into traceable delivery.",
+    practices: ["Backlogs and prioritization", "User stories", "Technical documentation", "Agile boards", "Task traceability"],
+  },
 ] as const;
 
 const englishWorkflowCopy = [
@@ -164,11 +186,15 @@ export function getEducation(language: Language): readonly EducationEntry[] {
 /** Returns translated group headings while preserving the verified technology inventory. */
 export function getTechnologyGroups(language: Language) {
   if (language === "es") return technologyGroups;
-  return technologyGroups.map((group, index) => ({
-    ...group,
-    title: englishTechnologyGroupCopy[index].title,
-    description: englishTechnologyGroupCopy[index].description,
-  }));
+  return technologyGroups.map((group, index) => {
+    const localizedCopy = englishTechnologyGroupCopy[index];
+    return {
+      ...group,
+      title: localizedCopy.title,
+      description: localizedCopy.description,
+      ...(localizedCopy && "practices" in localizedCopy ? { practices: localizedCopy.practices } : {}),
+    };
+  });
 }
 
 /** Returns the SDD workflow narrative for the active language. */

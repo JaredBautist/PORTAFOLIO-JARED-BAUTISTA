@@ -15,7 +15,7 @@ contrast.
 3. Deployed work with real product captures
 4. Engineering case studies: AXOLOT and MIPRES
 5. Professional experience
-6. Technology stack and AI development tools
+6. Technology stack, architecture, AI, audits, accessibility, SEO, and productivity
 7. Specification-driven workflow
 8. Education and credentials
 9. Contact call to action and footer
@@ -54,6 +54,10 @@ public/
 The page and section components remain presentational. Structured content, links, and
 technology groups live in `lib/portfolio-data.ts`, preventing content duplication and
 keeping external destinations reviewable in one place.
+
+Audit and SEO capabilities are grouped by concern. Recognizable products receive their
+official Simple Icons mark where available; standards, files, and practices remain text
+chips instead of receiving invented brand logos.
 
 ## Data Contracts
 
@@ -247,3 +251,22 @@ All visible and accessible copy consumes the same locale contract.
 Language switching is instant and works on a static deployment. Search metadata remains
 Spanish-first in this release; locale-specific URLs can be introduced later if search
 traffic justifies the additional routing surface.
+
+## ADR-008: Quality and SEO Capability Presentation
+
+### Context
+
+The portfolio must surface a broad audit and positioning toolkit for recruiting, but a
+flat list of every standard and product would weaken scanability and imply that files
+such as `robots.txt` are software brands.
+
+### Decision
+
+Extend the technology grid with one wide quality/accessibility/SEO group and one
+productivity group. Use logos only for actual products. Present technical SEO artifacts,
+AI-assisted DOM review, and use-case simulation as labelled practices.
+
+### Consequences
+
+Recruiters can scan concrete tools and implementation knowledge separately, while the
+original engineering stack remains readable and no unofficial logos are introduced.

@@ -81,8 +81,8 @@ const spanish = {
   },
   toolkit: {
     eyebrow: "Tecnologías",
-    title: "Un stack amplio, organizado alrededor del problema.",
-    description: "No elijo herramientas por moda: combino producto, backend, datos y entrega según el contrato y la complejidad real.",
+    title: "Ingeniería, calidad y posicionamiento en un mismo flujo.",
+    description: "Combino producto, backend, datos y entrega con auditorías de accesibilidad, rendimiento, SEO técnico y validación asistida por IA.",
     practices: "Prácticas de",
     architectureEyebrow: "Arquitectura & calidad",
     architectureTitle: "El criterio que conecta las herramientas.",
@@ -190,8 +190,8 @@ const english = {
   },
   toolkit: {
     eyebrow: "Technologies",
-    title: "A broad stack, organized around the problem.",
-    description: "I do not choose tools by trend: I combine product, backend, data, and delivery according to the contract and actual complexity.",
+    title: "Engineering, quality, and discoverability in one workflow.",
+    description: "I combine product, backend, data, and delivery with accessibility, performance, technical SEO, and AI-assisted validation audits.",
     practices: "Practices used in",
     architectureEyebrow: "Architecture & quality",
     architectureTitle: "The judgment that connects the tools.",

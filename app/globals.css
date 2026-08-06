@@ -897,7 +897,7 @@
     place-items: center;
     border-radius: 1.05rem;
     background: hsl(var(--sky));
-    color: hsl(203 64% 38%);
+    color: hsl(var(--primary));
     font-family: var(--font-display), sans-serif;
     font-size: 0.82rem;
     font-weight: 700;
@@ -1023,8 +1023,20 @@
 
   .toolkit-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1.25rem;
+  }
+
+  .toolkit-grid > .reveal:nth-child(-n + 3) {
+    grid-column: span 2;
+  }
+
+  .toolkit-grid > .reveal:nth-child(4) {
+    grid-column: span 4;
+  }
+
+  .toolkit-grid > .reveal:nth-child(5) {
+    grid-column: span 2;
   }
 
   .toolkit-card {
@@ -1523,12 +1535,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .toolkit-grid > .reveal:last-child {
-    grid-column: 1 / -1;
+  .toolkit-grid > .reveal:nth-child(-n + 5) {
+    grid-column: auto;
   }
 
-  .toolkit-grid > .reveal:last-child .technology-logo-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .toolkit-grid > .reveal:nth-child(n + 4) .technology-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .workflow-grid {
@@ -1735,11 +1747,11 @@
     grid-template-columns: 1fr;
   }
 
-  .toolkit-grid > .reveal:last-child {
+  .toolkit-grid > .reveal:nth-child(-n + 5) {
     grid-column: auto;
   }
 
-  .toolkit-grid > .reveal:last-child .technology-logo-grid,
+  .toolkit-grid > .reveal:nth-child(n + 4) .technology-logo-grid,
   .technology-logo-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

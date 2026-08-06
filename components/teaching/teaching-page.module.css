@@ -1,0 +1,776 @@
+.page {
+  min-height: 100dvh;
+  overflow: clip;
+  background:
+    radial-gradient(circle at 9% 12%, hsl(var(--sky-strong) / 0.18), transparent 24rem),
+    radial-gradient(circle at 92% 8%, hsl(var(--yellow-strong) / 0.2), transparent 25rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.container,
+.navigation,
+.heroGrid {
+  width: min(100% - 2rem, 76rem);
+  margin-inline: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid hsl(var(--border) / 0.72);
+  background: hsl(var(--background) / 0.86);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+
+.navigation {
+  display: flex;
+  min-height: 4.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.backLink,
+.footer a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.6rem;
+  color: hsl(var(--foreground));
+  font-size: 0.84rem;
+  font-weight: 700;
+  transition: color 180ms ease-out;
+}
+
+.backLink svg,
+.footer a svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero {
+  padding: clamp(4.5rem, 9vw, 8rem) 0 clamp(5rem, 10vw, 8.5rem);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(25rem, 0.92fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 6.5rem);
+}
+
+.eyebrow,
+.cardLabel {
+  color: hsl(var(--primary));
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  max-width: 11ch;
+  margin-top: 1rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(3.1rem, 6.2vw, 5.8rem);
+  font-weight: 700;
+  letter-spacing: -0.068em;
+  line-height: 0.98;
+}
+
+.heroCopy h1 span {
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(194 72% 42%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heroLead {
+  max-width: 43rem;
+  margin-top: 1.6rem;
+  color: hsl(var(--muted-foreground));
+  font-size: clamp(1.02rem, 1.45vw, 1.16rem);
+  line-height: 1.75;
+}
+
+.experienceBadge {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+  border: 1px solid hsl(var(--primary) / 0.2);
+  border-radius: 1rem;
+  background: linear-gradient(120deg, hsl(var(--lavender) / 0.72), hsl(var(--sky) / 0.6));
+  padding: 0.7rem 0.9rem;
+  box-shadow: 0 10px 28px hsl(var(--foreground) / 0.055);
+}
+
+.experienceIcon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.8rem;
+  background: hsl(var(--card) / 0.88);
+  color: hsl(var(--primary));
+}
+
+.experienceIcon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.experienceBadge strong,
+.experienceBadge span {
+  display: block;
+}
+
+.experienceBadge strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: -0.015em;
+}
+
+.experienceBadge div > span {
+  margin-top: 0.18rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.primaryButton,
+.secondaryButton,
+.whatsappButton {
+  display: inline-flex;
+  min-height: 3.1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  padding: 0.82rem 1.2rem;
+  font-size: 0.86rem;
+  font-weight: 750;
+  transition: transform 200ms ease-out, border-color 200ms ease-out, background-color 200ms ease-out, box-shadow 200ms ease-out;
+}
+
+.primaryButton,
+.whatsappButton {
+  background: hsl(153 58% 32%);
+  color: white;
+  box-shadow: 0 12px 30px hsl(153 58% 28% / 0.2);
+}
+
+.secondaryButton {
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.78);
+  color: hsl(var(--foreground));
+}
+
+.primaryButton svg,
+.secondaryButton svg,
+.whatsappButton svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 2rem;
+}
+
+.tagList li {
+  border: 1px solid hsl(var(--border));
+  border-radius: 999px;
+  background: hsl(var(--card) / 0.7);
+  color: hsl(var(--muted-foreground));
+  padding: 0.5rem 0.72rem;
+  font-size: 0.74rem;
+  font-weight: 650;
+}
+
+.heroVisual {
+  position: relative;
+  min-height: 34rem;
+}
+
+.heroVisual::before,
+.heroVisual::after {
+  position: absolute;
+  border-radius: 999px;
+  content: "";
+}
+
+.heroVisual::before {
+  top: 1rem;
+  right: 0;
+  width: 21rem;
+  height: 21rem;
+  background: hsl(var(--yellow-strong) / 0.32);
+}
+
+.heroVisual::after {
+  bottom: 0;
+  left: 0;
+  width: 18rem;
+  height: 18rem;
+  background: hsl(var(--sky-strong) / 0.3);
+}
+
+.portraitCard {
+  position: absolute;
+  top: 3.2rem;
+  right: 3rem;
+  z-index: 2;
+  width: min(17rem, 60%);
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  border-radius: 2rem;
+  background: linear-gradient(150deg, hsl(var(--sky)), hsl(var(--mint)) 54%, hsl(var(--yellow)));
+  box-shadow: 0 30px 75px hsl(var(--foreground) / 0.16);
+}
+
+.portraitBackdrop {
+  position: absolute;
+  inset: 12% 8% 22%;
+  border: 1px dashed hsl(var(--primary) / 0.25);
+  border-radius: 999px 999px 1.5rem 1.5rem;
+}
+
+.portrait {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 256 / 310;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.portraitCaption {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.88);
+  padding: 0.9rem 1rem;
+  backdrop-filter: blur(12px);
+}
+
+.portraitCaption strong {
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.88rem;
+}
+
+.portraitCaption span {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.62rem;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.subjectNote {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  min-height: 3.6rem;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  background: hsl(var(--card) / 0.93);
+  color: hsl(var(--foreground));
+  padding: 0.75rem 0.9rem;
+  box-shadow: 0 16px 36px hsl(var(--foreground) / 0.1);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 650;
+  backdrop-filter: blur(12px);
+}
+
+.subjectNote svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: hsl(var(--primary));
+}
+
+.mathNote { top: 0; left: 0; }
+.englishNote { right: -0.5rem; bottom: 3.5rem; }
+.aiNote { bottom: 0; left: 1rem; }
+
+.section {
+  padding: clamp(5rem, 9vw, 8rem) 0;
+}
+
+.tintedSection {
+  border-block: 1px solid hsl(var(--border) / 0.7);
+  background: linear-gradient(140deg, hsl(var(--sky) / 0.48), hsl(var(--card) / 0.72) 50%, hsl(var(--mint) / 0.46));
+}
+
+.sectionHeading {
+  max-width: 53rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.sectionHeading h2,
+.contactCard h2 {
+  margin-top: 0.75rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.2rem, 4.8vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.sectionHeading > p:last-child,
+.contactCard > div > p:last-child {
+  max-width: 46rem;
+  margin-top: 1rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.centerHeading {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.methodologyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.methodCard,
+.serviceCard,
+.processCard,
+.aiPrinciple {
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.5rem;
+  background: hsl(var(--card) / 0.84);
+  box-shadow: 0 16px 44px hsl(var(--foreground) / 0.055);
+}
+
+.methodCard {
+  height: 100%;
+  padding: 1.5rem;
+}
+
+.cardIcon,
+.serviceIcon,
+.aiPrincipleIcon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: 0.9rem;
+  background: hsl(var(--sky));
+  color: hsl(var(--primary));
+}
+
+.cardIcon svg,
+.serviceIcon svg,
+.aiPrincipleIcon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.methodCard .cardLabel {
+  margin-top: 1.3rem;
+}
+
+.methodCard h3,
+.serviceCard h3,
+.processCard h3,
+.aiPrinciple h3 {
+  margin-top: 0.5rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.28rem;
+  letter-spacing: -0.035em;
+}
+
+.methodCard > p:last-child,
+.serviceCard > p,
+.processCard > p,
+.aiPrinciple > div > p:last-child {
+  margin-top: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.88rem;
+  line-height: 1.68;
+}
+
+.aiPrinciple {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+  background: linear-gradient(120deg, hsl(var(--lavender) / 0.82), hsl(var(--card) / 0.9));
+  padding: 1.5rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.serviceCard {
+  height: 100%;
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.mathCard {
+  background: linear-gradient(145deg, hsl(var(--sky) / 0.82), hsl(var(--card) / 0.88));
+}
+
+.englishCard {
+  background: linear-gradient(145deg, hsl(var(--mint) / 0.82), hsl(var(--card) / 0.88));
+}
+
+.englishCard .serviceIcon {
+  background: hsl(var(--mint));
+}
+
+.serviceCard h3 {
+  margin-top: 1.25rem;
+  font-size: clamp(1.65rem, 3vw, 2.2rem);
+}
+
+.serviceCard ul {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1.25rem;
+}
+
+.serviceCard li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 620;
+  line-height: 1.5;
+}
+
+.serviceCard li svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  margin-top: 0.18rem;
+  color: hsl(153 55% 35%);
+}
+
+.processGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.processGrid::before {
+  position: absolute;
+  top: 3.2rem;
+  right: 10%;
+  left: 10%;
+  height: 1px;
+  background: hsl(var(--primary) / 0.2);
+  content: "";
+}
+
+.processGrid > li {
+  position: relative;
+  z-index: 1;
+}
+
+.processCard {
+  height: 100%;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.processCard > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0.9rem auto 0;
+  color: hsl(var(--primary));
+}
+
+.processNumber {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-inline: auto;
+  place-items: center;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.contactSection {
+  padding: 0 0 clamp(5rem, 9vw, 8rem);
+}
+
+.contactCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--primary) / 0.32);
+  border-radius: 2rem;
+  background:
+    radial-gradient(circle at 90% 20%, hsl(var(--yellow-strong) / 0.22), transparent 15rem),
+    hsl(229 35% 14%);
+  color: white;
+  padding: clamp(1.75rem, 5vw, 3.5rem);
+  box-shadow: 0 28px 70px hsl(229 35% 12% / 0.22);
+}
+
+.contactCard .eyebrow {
+  color: hsl(194 78% 73%);
+}
+
+.contactCard h2 {
+  max-width: 18ch;
+}
+
+.contactCard > div > p:last-child {
+  color: hsl(220 22% 78%);
+}
+
+.whatsappButton {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.footer {
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.55);
+}
+
+.footer > div {
+  display: flex;
+  min-height: 5.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer p {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.75rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .primaryButton:hover,
+  .secondaryButton:hover,
+  .whatsappButton:hover {
+    transform: translateY(-2px);
+  }
+
+  .primaryButton:hover,
+  .whatsappButton:hover {
+    box-shadow: 0 16px 38px hsl(153 58% 28% / 0.3);
+  }
+
+  .secondaryButton:hover {
+    border-color: hsl(var(--primary) / 0.38);
+    background: hsl(var(--lavender));
+  }
+
+  .backLink:hover,
+  .footer a:hover {
+    color: hsl(var(--primary));
+  }
+}
+
+.primaryButton:active,
+.secondaryButton:active,
+.whatsappButton:active {
+  opacity: 0.84;
+}
+
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCopy {
+    text-align: center;
+  }
+
+  .heroCopy h1,
+  .heroLead,
+  .experienceBadge {
+    margin-inline: auto;
+  }
+
+  .heroActions,
+  .tagList {
+    justify-content: center;
+  }
+
+  .heroVisual {
+    width: min(100%, 34rem);
+    min-height: 31rem;
+    margin-inline: auto;
+  }
+
+  .methodologyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .methodCard {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 1rem;
+  }
+
+  .methodCard .cardLabel,
+  .methodCard h3,
+  .methodCard > p:last-child {
+    grid-column: 2;
+  }
+
+  .methodCard .cardLabel {
+    margin-top: 0;
+  }
+
+  .methodCard .cardIcon {
+    grid-row: 1 / 4;
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .processGrid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .container,
+  .navigation,
+  .heroGrid {
+    width: min(100% - 1.25rem, 76rem);
+  }
+
+  .backLink span {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+
+  .heroCopy h1 {
+    font-size: clamp(2.75rem, 14.5vw, 4.25rem);
+  }
+
+  .heroActions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .portraitCard {
+    right: 50%;
+    width: 14rem;
+    transform: translateX(50%);
+  }
+
+  .mathNote { left: 0; }
+  .englishNote { right: 0; }
+
+  .servicesGrid,
+  .processGrid,
+  .contactCard {
+    grid-template-columns: 1fr;
+  }
+
+  .contactCard {
+    text-align: center;
+  }
+
+  .contactCard h2 {
+    margin-inline: auto;
+  }
+
+  .whatsappButton {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .footer > div {
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 1.25rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .heroVisual {
+    min-height: 29rem;
+  }
+
+  .portraitCard {
+    width: 12.5rem;
+  }
+
+  .subjectNote {
+    max-width: 11rem;
+    font-size: 0.62rem;
+  }
+
+  .aiNote {
+    left: 0;
+  }
+
+  .methodCard,
+  .aiPrinciple {
+    grid-template-columns: 1fr;
+  }
+
+  .methodCard .cardIcon {
+    grid-row: auto;
+  }
+
+  .methodCard .cardLabel,
+  .methodCard h3,
+  .methodCard > p:last-child {
+    grid-column: 1;
+  }
+}

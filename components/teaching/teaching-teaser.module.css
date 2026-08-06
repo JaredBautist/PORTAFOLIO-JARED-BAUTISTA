@@ -1,0 +1,101 @@
+.section {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.5rem;
+  background: linear-gradient(120deg, hsl(var(--sky) / 0.62), hsl(var(--card)) 48%, hsl(var(--yellow) / 0.58));
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-shadow: 0 14px 38px hsl(var(--foreground) / 0.05);
+}
+
+.icon {
+  display: grid;
+  width: 3.5rem;
+  height: 3.5rem;
+  place-items: center;
+  border-radius: 1rem;
+  background: hsl(var(--card));
+  color: hsl(var(--primary));
+  box-shadow: 0 10px 26px hsl(var(--foreground) / 0.08);
+}
+
+.icon svg {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.copy h2 {
+  margin-top: 0.35rem;
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+  letter-spacing: -0.035em;
+}
+
+.copy > p:last-child {
+  max-width: 48rem;
+  margin-top: 0.35rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.link {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid hsl(var(--primary) / 0.22);
+  border-radius: 999px;
+  background: hsl(var(--card) / 0.86);
+  color: hsl(var(--foreground));
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: border-color 180ms ease-out, background-color 180ms ease-out, color 180ms ease-out;
+}
+
+.link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    border-color: hsl(var(--primary) / 0.45);
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .link {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .icon {
+    margin-inline: auto;
+  }
+
+  .copy :global(.eyebrow) {
+    justify-content: center;
+  }
+}
