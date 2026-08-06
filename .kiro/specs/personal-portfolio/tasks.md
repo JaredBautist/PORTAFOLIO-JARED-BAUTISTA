@@ -1,0 +1,23 @@
+# Personal Portfolio Tasks
+
+- [x] Verify the target folder, existing working tree, and Next.js stack.
+- [x] Verify public repository metadata, live URLs, and supported technology claims.
+- [x] Generate and persist the portfolio design system with `ui-ux-pro-max`.
+- [x] Define requirements, architecture, content contracts, and ADRs.
+- [x] Capture and optimize real project imagery for local delivery.
+- [x] Implement the typed portfolio content source.
+- [x] Implement the responsive shell, navigation, hero, and theme behavior.
+- [x] Implement deployed project and engineering case-study sections.
+- [x] Implement experience, toolkit, workflow, and education sections.
+- [x] Implement verified contact actions, metadata, and social preview.
+- [x] Replace the generic README with setup, architecture, validation, and Vercel steps.
+- [x] Validate lint, TypeScript, production build, accessibility, and responsive layouts.
+- [x] Review the final UI against the `ui-ux-pro-max` pre-delivery checklist.
+- [x] Add the supplied CV as a stable, directly downloadable public asset.
+- [x] Extract, optimize, and add Jared's supplied portrait to the hero.
+- [x] Revalidate accessibility, responsive layout, lint, types, and production build.
+- [x] Define typed Spanish and English dictionaries for all visible and accessible copy.
+- [x] Implement persisted language state and document-language synchronization.
+- [x] Add an accessible ES/EN selector to desktop and mobile navigation.
+- [x] Translate projects, experience, toolkit, workflow, education, contact, and footer.
+- [x] Validate both languages across desktop, mobile, keyboard, lint, types, and build.
