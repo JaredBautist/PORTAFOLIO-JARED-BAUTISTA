@@ -45,7 +45,7 @@ lib/
 ├── portfolio-data.ts          # Typed projects, experience, education and URLs
 └── i18n.ts                    # Typed ES/EN interface dictionaries and helpers
 public/
-├── documents/                 # Downloadable CV with a stable public filename
+├── documents/                 # Downloadable Spanish and English CVs
 ├── profile/                   # Optimized professional portrait
 ├── projects/                  # Optimized captures from live products
 └── ai-tools/                  # Repository-owned AI tool marks
@@ -210,19 +210,30 @@ code, and changes to either project remain isolated.
 
 ### Context
 
-The supplied CV and portrait must remain available after a static Vercel deployment
-without introducing storage services or remote image dependencies.
+The supplied Spanish CV, English CV, and portrait must remain available after a static
+Vercel deployment without introducing storage services or remote image dependencies.
+
+### Options Considered
+
+1. Keep one CV asset for both interface languages. Rejected because visitors can receive
+   a document in the wrong language.
+2. Add locale-specific routes or an API download endpoint. Rejected as unnecessary for
+   two static assets and inconsistent with the single-page deployment.
+3. Store both CVs as static assets and select the matching file from the existing
+   language state.
 
 ### Decision
 
-Store the CV under `public/documents/` with a readable filename and expose it through a
-semantic anchor using the `download` attribute. Extract the supplied portrait, preserve
-its aspect ratio, optimize it as WebP, and render it with `next/image` in the hero.
+Store both CVs under `public/documents/` with readable language-specific filenames. Map
+the existing Spanish and English language state to the matching asset and expose it
+through a semantic anchor using the `download` attribute. Extract the supplied portrait,
+preserve its aspect ratio, optimize it as WebP, and render it with `next/image` in the
+hero.
 
 ### Consequences
 
-Both assets deploy with the application and work without an API. Replacing either file
-requires updating the repository asset while keeping the public filename stable.
+All assets deploy with the application and work without an API. The hero remains the
+single download boundary, while each language receives its own versioned static file.
 
 ## ADR-007: Client-Side Language Preference
 

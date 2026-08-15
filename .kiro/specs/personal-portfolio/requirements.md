@@ -50,7 +50,9 @@ deployed to Vercel without a custom backend.
 16. WHEN search engines or social platforms inspect the page, the system SHALL expose
     descriptive metadata for Jared's role, location, and project-led portfolio.
 17. WHEN a visitor selects the CV action, the system SHALL download Jared's supplied
-    PDF using a readable filename without opening an untrusted external service.
+    Spanish PDF when the active language is Spanish and the supplied English PDF when
+    the active language is English, using readable filenames without opening an
+    untrusted external service.
 18. WHEN the hero is displayed, the system SHALL show Jared's supplied portrait with
     descriptive alternative text, reserved dimensions, and responsive presentation.
 19. WHEN a visitor selects English or Spanish, the system SHALL translate all visible

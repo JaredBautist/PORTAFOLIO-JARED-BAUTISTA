@@ -24,3 +24,6 @@
 - [x] Reframe Coworking as a PrimeWorks LLC SaaS product and strengthen Jenny's verified SEO narrative.
 - [x] Add bilingual audit, accessibility, technical SEO, AI-validation, and productivity capabilities.
 - [x] Revalidate the expanded technology layout, accessibility, languages, lint, types, and build locally.
+- [x] Replace the legacy CV with the supplied Spanish and English PDFs.
+- [x] Map the hero download action to the CV matching the active interface language.
+- [x] Validate both PDF assets, locale-specific links, lint, types, and production build.

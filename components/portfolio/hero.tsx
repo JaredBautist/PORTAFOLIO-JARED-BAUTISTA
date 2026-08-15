@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { ArrowDownRight, ArrowUpRight, Download, Github, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/components/portfolio/language-provider";
-import { contactLinks } from "@/lib/portfolio-data";
+import { contactLinks, cvDocuments } from "@/lib/portfolio-data";
 
 /** Presents Jared's positioning, proof points, and primary conversion actions. */
 export function Hero() {
-  const { copy } = useLanguage();
+  const { copy, language } = useLanguage();
   const hero = copy.hero;
+  const cvDocument = cvDocuments[language];
   return (
     <section id="inicio" className="hero-section" aria-labelledby="hero-title">
       <div className="container-shell hero-grid">
@@ -48,8 +49,8 @@ export function Hero() {
             </a>
             <a
               className="button button--secondary"
-              href={contactLinks.cv}
-              download="Jared-Bautista-CV.pdf"
+              href={cvDocument.href}
+              download={cvDocument.filename}
             >
               <Download aria-hidden="true" /> {hero.downloadCv}
             </a>

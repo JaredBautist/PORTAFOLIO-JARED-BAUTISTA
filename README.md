@@ -48,7 +48,7 @@ lib/teaching-content.ts      Typed Spanish and English teaching content
 public/projects/             Local captures of deployed work
 public/ai-tools/             AI development tool marks
 public/profile/              Optimized professional portrait
-public/documents/            Downloadable CV
+public/documents/            Downloadable Spanish and English CVs
 .kiro/specs/personal-portfolio/  Requirements, design and task trace
 design-system/               Visual-system decisions
 ```

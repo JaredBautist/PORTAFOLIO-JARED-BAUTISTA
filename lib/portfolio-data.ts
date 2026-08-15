@@ -48,12 +48,22 @@ export interface TechnologyGroup {
 }
 
 export const contactLinks = {
-  cv: "/documents/Jared-Bautista-CV.pdf",
   email: "mailto:balckyfureu@gmail.com",
   emailLabel: "balckyfureu@gmail.com",
   github: "https://github.com/JaredBautist",
   whatsapp: "https://wa.me/573208091592",
   whatsappLabel: "+57 320 809 1592",
+} as const;
+
+export const cvDocuments = {
+  es: {
+    href: "/documents/Jared-Bautista-CV-Spanish.pdf",
+    filename: "Jared-Bautista-CV-Spanish.pdf",
+  },
+  en: {
+    href: "/documents/Jared-Bautista-CV-English.pdf",
+    filename: "Jared-Bautista-CV-English.pdf",
+  },
 } as const;
 
 export const deployedProjects = [
