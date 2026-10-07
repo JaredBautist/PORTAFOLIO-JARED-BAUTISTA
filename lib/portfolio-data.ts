@@ -85,6 +85,23 @@ export const deployedProjects = [
     accent: "lavender",
   },
   {
+    slug: "tutor-cucuta",
+    title: "TutorCúcuta",
+    category: "Plataforma educativa · Búsqueda de docentes",
+    summary:
+      "Plataforma para encontrar tu docente ideal en Cúcuta y su área metropolitana, comparando materias, tarifas, disponibilidad y cercanía mediante filtros y un mapa interactivo.",
+    contribution:
+      "Desarrollo integral de la plataforma: búsqueda y compatibilidad de docentes, mapa interactivo, perfiles de estudiantes y tutores e integración con Supabase.",
+    technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "MapLibre GL JS"],
+    image: "/projects/tutor-cucuta.webp",
+    imageAlt: "Página de acceso de TutorCúcuta con selección de estudiante o tutor e ilustración de cobertura en Cúcuta",
+    liveUrl: "https://tutor-cucuta.vercel.app/",
+    repositoryUrl: "https://github.com/JaredBautist/TUTOR-CUCUTA",
+    kind: "deployed",
+    featured: true,
+    accent: "sky",
+  },
+  {
     slug: "metropizza",
     title: "MetroPizza",
     category: "Web comercial · Experiencia de marca",

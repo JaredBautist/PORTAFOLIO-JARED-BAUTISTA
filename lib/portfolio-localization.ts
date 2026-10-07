@@ -22,6 +22,12 @@ const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
     contribution: "End-to-end product creation: booking experience, frontend architecture, data model, calendar, reporting, and access control.",
     imageAlt: "Dark-themed sign-in screen for Coworking Management Platform",
   },
+  "tutor-cucuta": {
+    category: "Education platform · Tutor discovery",
+    summary: "A platform for finding your ideal tutor in Cúcuta and its metropolitan area, comparing subjects, rates, availability, and proximity through filters and an interactive map.",
+    contribution: "End-to-end platform development: tutor search and matching, interactive map, student and tutor profiles, and Supabase integration.",
+    imageAlt: "TutorCúcuta sign-in page with student or tutor selection and a coverage illustration of Cúcuta",
+  },
   metropizza: {
     category: "Commercial website · Brand experience",
     summary: "Corporate website for a two-location pizzeria featuring its story, menu, gallery, reviews, local SEO, and direct ordering paths.",
