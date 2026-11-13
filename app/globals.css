@@ -673,13 +673,43 @@
     gap: 1.25rem;
   }
 
-  .project-grid--deployed > .reveal:nth-child(1),
-  .project-grid--deployed > .reveal:nth-child(2) {
+  .project-grid--deployed > .reveal {
     grid-column: span 6;
+    height: auto;
+    align-self: start;
   }
 
-  .project-grid--deployed > .reveal:nth-child(n + 3) {
-    grid-column: span 4;
+  .project-grid--deployed > .project-grid__wide {
+    grid-column: 1 / -1;
+  }
+
+  .project-grid--deployed .project-card__media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-grid--deployed .project-card__links {
+    margin-top: 0;
+  }
+
+  .project-grid--deployed .project-card--horizontal {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .project-grid--deployed .project-card--horizontal .project-card__media {
+    aspect-ratio: auto;
+    border-bottom: 0;
+    border-right: 1px solid hsl(var(--border));
+  }
+
+  .project-card--horizontal .project-card__image {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .project-grid--deployed .project-card__meta {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
   }
 
   .project-grid--engineering > .reveal {
@@ -1335,73 +1365,64 @@
     padding: var(--section-space) 0;
   }
 
-  .contact-card {
-    position: relative;
+  .contact-layout {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: clamp(2rem, 6vw, 5rem);
-    overflow: hidden;
-    border-radius: 2rem;
-    background:
-      radial-gradient(circle at 4% 10%, hsl(248 78% 70% / 0.3), transparent 22rem),
-      radial-gradient(circle at 95% 95%, hsl(162 68% 55% / 0.2), transparent 20rem),
-      hsl(229 37% 14%);
-    color: white;
-    padding: clamp(2rem, 6vw, 4.5rem);
-    box-shadow: 0 30px 90px hsl(229 40% 12% / 0.22);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2.5rem, 7vw, 6rem);
+    border-top: 1px solid hsl(var(--border));
+    padding-top: clamp(2rem, 5vw, 4rem);
   }
 
-  .contact-card .eyebrow {
-    color: hsl(158 58% 72%);
+  .contact-intro .eyebrow {
+    color: hsl(var(--muted-foreground));
   }
 
-  .contact-card h2 {
-    margin-top: 0.9rem;
-    font-size: clamp(2rem, 4.2vw, 3.6rem);
-    font-weight: 700;
+  .contact-intro h2 {
+    margin-top: 0.75rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
     letter-spacing: -0.055em;
-    line-height: 1.04;
+    line-height: 1.1;
   }
 
-  .contact-card__copy > p:last-child {
-    margin-top: 1rem;
-    color: hsl(222 24% 79%);
-    font-size: 0.95rem;
-    line-height: 1.75;
+  .contact-intro > p:last-child {
+    max-width: 36ch;
+    margin-top: 1.25rem;
+    color: hsl(var(--muted-foreground));
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .contact-options {
-    display: grid;
-    gap: 0.7rem;
+    min-width: 0;
+    list-style: none;
+  }
+
+  .contact-options li + li {
+    border-top: 1px solid hsl(var(--border));
   }
 
   .contact-options a {
-    display: grid;
-    min-height: 4.8rem;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    min-height: 5rem;
     align-items: center;
-    gap: 0.85rem;
-    border: 1px solid hsl(0 0% 100% / 0.14);
-    border-radius: 1.1rem;
-    background: hsl(0 0% 100% / 0.07);
-    padding: 0.8rem 1rem;
-    transition: background-color 200ms ease-out, border-color 200ms ease-out, transform 200ms ease-out;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0.25rem;
+    color: hsl(var(--foreground));
+    transition: color 160ms ease, opacity 120ms ease;
   }
 
-  .contact-option__icon {
-    display: grid;
-    width: 2.65rem;
-    height: 2.65rem;
-    place-items: center;
-    border-radius: 0.85rem;
-    background: hsl(0 0% 100% / 0.1);
-    color: hsl(158 58% 72%);
+  .contact-options a > span {
+    min-width: 0;
   }
 
-  .contact-option__icon svg,
   .contact-options a > svg {
-    width: 1.05rem;
-    height: 1.05rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+    color: hsl(var(--muted-foreground));
   }
 
   .contact-options small,
@@ -1410,14 +1431,28 @@
   }
 
   .contact-options small {
-    color: hsl(222 16% 65%);
-    font-size: 0.65rem;
+    color: hsl(var(--muted-foreground));
+    font-size: 0.8rem;
   }
 
   .contact-options strong {
-    margin-top: 0.08rem;
+    margin-top: 0.3rem;
     overflow-wrap: anywhere;
-    font-size: 0.78rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .contact-options li:first-child strong {
+    font-size: clamp(1.1rem, 2.1vw, 1.6rem);
+    letter-spacing: -0.025em;
+  }
+
+  .contact-options a:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 4px;
+    border-radius: 0.25rem;
+    transition: none;
   }
 
   .site-footer {
@@ -1501,9 +1536,7 @@
   }
 
   .contact-options a:hover {
-    border-color: hsl(0 0% 100% / 0.28);
-    background: hsl(0 0% 100% / 0.12);
-    transform: translateX(0.25rem);
+    color: hsl(var(--primary));
   }
 }
 
@@ -1524,11 +1557,6 @@
   .code-window__body {
     min-height: 16rem;
     padding: 1.6rem 1.2rem;
-  }
-
-  .project-grid--deployed > .reveal,
-  .project-grid--deployed > .reveal:nth-child(n + 3) {
-    grid-column: span 6;
   }
 
   .toolkit-grid {
@@ -1632,7 +1660,7 @@
 
   .experience-layout,
   .education-layout,
-  .contact-card {
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1642,6 +1670,22 @@
 
   .education-intro {
     position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .project-grid--deployed > .reveal {
+    grid-column: 1 / -1;
+  }
+
+  .project-grid--deployed .project-card--horizontal {
+    display: flex;
+  }
+
+  .project-grid--deployed .project-card--horizontal .project-card__media {
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid hsl(var(--border));
   }
 }
 
@@ -1718,9 +1762,6 @@
     font-size: clamp(2rem, 11vw, 3rem);
   }
 
-  .project-grid--deployed > .reveal:nth-child(1),
-  .project-grid--deployed > .reveal:nth-child(2),
-  .project-grid--deployed > .reveal:nth-child(n + 3),
   .project-grid--engineering > .reveal {
     grid-column: 1 / -1;
   }
@@ -1768,11 +1809,6 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 0.25rem;
-  }
-
-  .contact-card {
-    border-radius: 1.5rem;
-    padding: 1.5rem;
   }
 
   .site-footer__inner {

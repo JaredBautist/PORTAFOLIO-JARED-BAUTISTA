@@ -8,16 +8,21 @@ import type { PortfolioProject } from "@/lib/portfolio-data";
 interface ProjectCardProps {
   readonly project: PortfolioProject;
   readonly priority?: boolean;
+  readonly variant?: "default" | "horizontal";
 }
 
 /** Displays one evidence-backed project with optimized media and explicit destinations. */
-export function ProjectCard({ project, priority = false }: ProjectCardProps) {
+export function ProjectCard({ project, priority = false, variant = "default" }: ProjectCardProps) {
   const { copy } = useLanguage();
   const labels = copy.projects;
-  const isLive = Boolean(project.liveUrl);
+  const isInDevelopment = project.status === "in-development";
+  const isLive = Boolean(project.liveUrl) && !isInDevelopment;
+  const statusLabel = isInDevelopment
+    ? labels.inDevelopment
+    : isLive ? labels.online : project.kind === "product" ? labels.published : labels.protected;
 
   return (
-    <article className={`project-card project-card--${project.accent}`}>
+    <article className={`project-card project-card--${project.accent}${variant === "horizontal" ? " project-card--horizontal" : ""}`}>
       <a
         className="project-card__media"
         href={project.liveUrl ?? project.repositoryUrl}
@@ -30,7 +35,9 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
           alt={project.imageAlt}
           fill
           priority={priority}
-          sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 42vw"
+          sizes={variant === "horizontal"
+            ? "(max-width: 767px) 100vw, (max-width: 1280px) 40vw, 488px"
+            : "(max-width: 767px) 100vw, (max-width: 1280px) 50vw, 608px"}
           className="project-card__image"
         />
         <span className="project-card__open" aria-hidden="true">
@@ -43,7 +50,7 @@ export function ProjectCard({ project, priority = false }: ProjectCardProps) {
           <span>{project.category}</span>
           <span className={isLive ? "live-status" : "case-status"}>
             {isLive && <span aria-hidden="true" />}
-            {isLive ? labels.online : project.kind === "product" ? labels.published : labels.protected}
+            {statusLabel}
           </span>
         </div>
         <h3>{project.title}</h3>

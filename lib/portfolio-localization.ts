@@ -28,6 +28,12 @@ const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
     contribution: "End-to-end platform development: tutor search and matching, interactive map, student and tutor profiles, and Supabase integration.",
     imageAlt: "TutorCúcuta sign-in page with student or tutor selection and a coverage illustration of Cúcuta",
   },
+  cabak: {
+    category: "E-commerce · Women's activewear",
+    summary: "An online women's activewear store built with Shopify, currently in development.",
+    contribution: "Development and configuration of the online store in Shopify.",
+    imageAlt: "Cabak's public coming-soon page",
+  },
   metropizza: {
     category: "Commercial website · Brand experience",
     summary: "Corporate website for a two-location pizzeria featuring its story, menu, gallery, reviews, local SEO, and direct ordering paths.",

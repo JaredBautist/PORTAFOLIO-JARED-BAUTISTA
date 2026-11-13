@@ -14,6 +14,7 @@ export interface PortfolioProject {
   readonly secondaryUrl?: string;
   readonly secondaryLabel?: string;
   readonly kind: ProjectKind;
+  readonly status?: "in-development";
   readonly featured?: boolean;
   readonly accent: "lavender" | "sky" | "mint" | "peach" | "yellow";
 }
@@ -85,21 +86,20 @@ export const deployedProjects = [
     accent: "lavender",
   },
   {
-    slug: "tutor-cucuta",
-    title: "TutorCúcuta",
-    category: "Plataforma educativa · Búsqueda de docentes",
+    slug: "cabak",
+    title: "Cabak",
+    category: "E-commerce · Ropa deportiva femenina",
     summary:
-      "Plataforma para encontrar tu docente ideal en Cúcuta y su área metropolitana, comparando materias, tarifas, disponibilidad y cercanía mediante filtros y un mapa interactivo.",
+      "Tienda online de ropa deportiva femenina desarrollada con Shopify, actualmente en desarrollo.",
     contribution:
-      "Desarrollo integral de la plataforma: búsqueda y compatibilidad de docentes, mapa interactivo, perfiles de estudiantes y tutores e integración con Supabase.",
-    technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "MapLibre GL JS"],
-    image: "/projects/tutor-cucuta.webp",
-    imageAlt: "Página de acceso de TutorCúcuta con selección de estudiante o tutor e ilustración de cobertura en Cúcuta",
-    liveUrl: "https://tutor-cucuta.vercel.app/",
-    repositoryUrl: "https://github.com/JaredBautist/TUTOR-CUCUTA",
+      "Desarrollo y configuración de la tienda online en Shopify.",
+    technologies: ["Shopify"],
+    image: "/projects/cabak.webp",
+    imageAlt: "Página pública de próxima apertura de Cabak",
+    liveUrl: "https://cabak.co/",
     kind: "deployed",
-    featured: true,
-    accent: "sky",
+    status: "in-development",
+    accent: "peach",
   },
   {
     slug: "metropizza",
@@ -164,6 +164,23 @@ export const deployedProjects = [
     liveUrl: "https://portafoliojennybautista.vercel.app/",
     repositoryUrl: "https://github.com/JaredBautist/PORTAFOLIO-JENNY-BAUTISTA",
     kind: "deployed",
+    accent: "sky",
+  },
+  {
+    slug: "tutor-cucuta",
+    title: "TutorCúcuta",
+    category: "Plataforma educativa · Búsqueda de docentes",
+    summary:
+      "Plataforma para encontrar tu docente ideal en Cúcuta y su área metropolitana, comparando materias, tarifas, disponibilidad y cercanía mediante filtros y un mapa interactivo.",
+    contribution:
+      "Desarrollo integral de la plataforma: búsqueda y compatibilidad de docentes, mapa interactivo, perfiles de estudiantes y tutores e integración con Supabase.",
+    technologies: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "MapLibre GL JS"],
+    image: "/projects/tutor-cucuta.webp",
+    imageAlt: "Página de acceso de TutorCúcuta con selección de estudiante o tutor e ilustración de cobertura en Cúcuta",
+    liveUrl: "https://tutor-cucuta.vercel.app/",
+    repositoryUrl: "https://github.com/JaredBautist/TUTOR-CUCUTA",
+    kind: "deployed",
+    status: "in-development",
     accent: "sky",
   },
 ] as const satisfies readonly PortfolioProject[];
@@ -290,6 +307,7 @@ export const technologyGroups: readonly TechnologyGroup[] = [
       { name: "Git", icon: "git", color: "#F05032" },
       { name: "GitHub Actions", icon: "githubactions", color: "#2088FF" },
       { name: "Vercel", icon: "vercel", color: "#111827" },
+      { name: "Shopify", icon: "shopify", color: "#5E8E3E" },
     ],
   },
   {

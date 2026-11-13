@@ -28,8 +28,16 @@ export function ProjectsSection() {
 
         <div className="project-grid project-grid--deployed">
           {deployedProjects.map((project, index) => (
-            <Reveal key={project.slug} delay={Math.min(index, 2) * 70}>
-              <ProjectCard project={project} priority={index < 2} />
+            <Reveal
+              key={project.slug}
+              delay={Math.min(index, 2) * 70}
+              className={project.slug === "tutor-cucuta" ? "project-grid__wide" : undefined}
+            >
+              <ProjectCard
+                project={project}
+                priority={index < 2}
+                variant={project.slug === "tutor-cucuta" ? "horizontal" : "default"}
+              />
             </Reveal>
           ))}
         </div>
