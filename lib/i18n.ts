@@ -43,7 +43,7 @@ const spanish = {
     email: "Escribirme",
     proofLabel: "Resumen profesional",
     proofPoints: [
-      { value: "5", label: "experiencias web desplegadas" },
+      { value: "6", label: "experiencias web desplegadas" },
       { value: "1", label: "producto publicado en npm" },
       { value: "C1", label: "nivel profesional de inglés" },
     ],
@@ -68,6 +68,7 @@ const spanish = {
     technologies: "Tecnologías de",
     viewSite: "Ver sitio",
     code: "Código",
+    certificate: "Descargar certificado",
   },
   experience: {
     eyebrow: "Experiencia profesional",
@@ -101,6 +102,7 @@ const spanish = {
     title: "Aprendizaje continuo con una base práctica.",
     description: "Mi formación combina desarrollo de software, arquitectura y un uso disciplinado de IA para entregar sistemas más claros y sostenibles.",
     quote: "Aprender una tecnología importa. Entender cuándo usarla —y cuándo no— importa más.",
+    downloadCertificate: "Descargar certificado",
   },
   contact: {
     eyebrow: "Contacto",
@@ -153,7 +155,7 @@ const english = {
     email: "Email me",
     proofLabel: "Professional summary",
     proofPoints: [
-      { value: "5", label: "deployed web experiences" },
+      { value: "6", label: "deployed web experiences" },
       { value: "1", label: "product published on npm" },
       { value: "C1", label: "professional English level" },
     ],
@@ -178,6 +180,7 @@ const english = {
     technologies: "Technologies used in",
     viewSite: "View site",
     code: "Code",
+    certificate: "Download certificate",
   },
   experience: {
     eyebrow: "Professional experience",
@@ -211,6 +214,7 @@ const english = {
     title: "Continuous learning grounded in practice.",
     description: "My education combines software development, architecture, and disciplined use of AI to deliver clearer, more sustainable systems.",
     quote: "Learning a technology matters. Understanding when to use it —and when not to— matters more.",
+    downloadCertificate: "Download certificate",
   },
   contact: {
     eyebrow: "Contact",

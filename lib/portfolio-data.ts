@@ -13,6 +13,8 @@ export interface PortfolioProject {
   readonly repositoryUrl?: string;
   readonly secondaryUrl?: string;
   readonly secondaryLabel?: string;
+  readonly certificateUrl?: string;
+  readonly certificateLabel?: string;
   readonly kind: ProjectKind;
   readonly status?: "in-development";
   readonly featured?: boolean;
@@ -33,6 +35,7 @@ export interface EducationEntry {
   readonly institution: string;
   readonly period?: string;
   readonly status: string;
+  readonly certificateUrl?: string;
 }
 
 export interface TechnologyItem {
@@ -183,6 +186,23 @@ export const deployedProjects = [
     status: "in-development",
     accent: "sky",
   },
+  {
+    slug: "jade-route",
+    title: "Jade Route",
+    category: "Agencia de viajes · Hackathon Founding.dev",
+    summary:
+      "Landing page para una agencia de viajes boutique especializada en experiencias personalizadas a China, desarrollada y desplegada durante el Design Hackathon de Founding.dev.",
+    contribution:
+      "Diseño visual, arquitectura de componentes, narrativa de marca, optimización de rendimiento y despliegue completo en la plataforma de Founding.dev.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Founding.dev", "AI-assisted"],
+    image: "/projects/jaderoute.webp",
+    imageAlt: "Portada de Jade Route con tipografía editorial, montañas de Guilin y propuesta de viajes a China",
+    liveUrl: "https://jaderoute.foundingdev.com/",
+    certificateUrl: "/documents/Jared-Bautista-Founding-Dev-Hackathon-Certificate.pdf",
+    certificateLabel: "Descargar certificado",
+    kind: "deployed",
+    accent: "mint",
+  },
 ] as const satisfies readonly PortfolioProject[];
 
 export const engineeringProjects = [
@@ -249,6 +269,12 @@ export const education = [
     status: "Completado",
   },
   {
+    title: "Ingeniería de Software",
+    institution: "Fundación de Estudios Superiores Comfanorte · Continuidad profesional",
+    period: "2026 — 2027",
+    status: "En proceso",
+  },
+  {
     title: "Diplomado en Arquitectura de Software impulsada con IA",
     institution: "Fundación de Estudios Superiores Comfanorte",
     status: "Completado",
@@ -259,10 +285,11 @@ export const education = [
     status: "Certificado",
   },
   {
-    title: "Ingeniería de Software",
-    institution: "Fundación de Estudios Superiores Comfanorte · Continuidad profesional",
-    period: "2026 — 2027",
-    status: "En curso",
+    title: "Founding.dev Design Hackathon",
+    institution: "Founding.dev · Participación y desarrollo de landing con IA",
+    period: "Noviembre 2026",
+    status: "Certificado",
+    certificateUrl: "/documents/Jared-Bautista-Founding-Dev-Hackathon-Certificate.pdf",
   },
 ] as const satisfies readonly EducationEntry[];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, GraduationCap } from "lucide-react";
+import { Award, BookOpen, GraduationCap } from "lucide-react";
 import { useLanguage } from "@/components/portfolio/language-provider";
 import { getEducation } from "@/lib/portfolio-localization";
 import { Reveal } from "@/components/portfolio/reveal";
@@ -41,6 +41,17 @@ export function EducationSection() {
                   </div>
                   <h3>{item.title}</h3>
                   <p>{item.institution}</p>
+                  {item.certificateUrl && (
+                    <div style={{ marginTop: "0.5rem" }}>
+                      <a
+                        className="text-link"
+                        href={item.certificateUrl}
+                        download="Jared-Bautista-Founding-Dev-Hackathon-Certificate.pdf"
+                      >
+                        <Award aria-hidden="true" /> {educationCopy.downloadCertificate ?? "Descargar certificado"}
+                      </a>
+                    </div>
+                  )}
                 </div>
               </article>
             </Reveal>

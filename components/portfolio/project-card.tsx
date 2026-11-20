@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight, Github, PackageOpen } from "lucide-react";
+import { ArrowUpRight, Award, Github, PackageOpen } from "lucide-react";
 import { useLanguage } from "@/components/portfolio/language-provider";
 import type { PortfolioProject } from "@/lib/portfolio-data";
 
@@ -79,6 +79,15 @@ export function ProjectCard({ project, priority = false, variant = "default" }: 
           {project.secondaryUrl && (
             <a className="text-link" href={project.secondaryUrl} target="_blank" rel="noreferrer">
               <PackageOpen aria-hidden="true" /> {project.secondaryLabel}
+            </a>
+          )}
+          {project.certificateUrl && (
+            <a
+              className="text-link"
+              href={project.certificateUrl}
+              download="Jared-Bautista-Founding-Dev-Hackathon-Certificate.pdf"
+            >
+              <Award aria-hidden="true" /> {project.certificateLabel ?? labels.certificate}
             </a>
           )}
         </div>

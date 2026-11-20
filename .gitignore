@@ -38,3 +38,6 @@ next-env.d.ts
 # local source files retained outside the published application
 /HOJA DE VIDA JARED BAUTISTA SIERRA.PDF(1)-comprimido.pdf
 /hola.md
+
+# graphify
+/graphify-out/

@@ -13,6 +13,7 @@ import type { Language } from "@/lib/i18n";
 
 type ProjectCopy = Pick<PortfolioProject, "category" | "summary" | "contribution" | "imageAlt"> & {
   readonly secondaryLabel?: string;
+  readonly certificateLabel?: string;
 };
 
 const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
@@ -27,6 +28,13 @@ const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
     summary: "A platform for finding your ideal tutor in Cúcuta and its metropolitan area, comparing subjects, rates, availability, and proximity through filters and an interactive map.",
     contribution: "End-to-end platform development: tutor search and matching, interactive map, student and tutor profiles, and Supabase integration.",
     imageAlt: "TutorCúcuta sign-in page with student or tutor selection and a coverage illustration of Cúcuta",
+  },
+  "jade-route": {
+    category: "Travel agency · Founding.dev Hackathon",
+    summary: "A landing page for a boutique travel agency specializing in tailor-made journeys to China, built and shipped during the Founding.dev Design Hackathon.",
+    contribution: "Visual design, component architecture, brand storytelling, performance optimization, and end-to-end deployment on Founding.dev.",
+    imageAlt: "Jade Route hero section featuring editorial typography, karst mountains of Guilin, and tailor-made travel offerings to China",
+    certificateLabel: "Download certificate",
   },
   cabak: {
     category: "E-commerce · Women's activewear",
@@ -96,6 +104,12 @@ const englishEducation: readonly EducationEntry[] = [
     status: "Completed",
   },
   {
+    title: "Software Engineering",
+    institution: "Fundación de Estudios Superiores Comfanorte · Professional continuation",
+    period: "2026 — 2027",
+    status: "In progress",
+  },
+  {
     title: "Diploma in AI-Powered Software Architecture",
     institution: "Fundación de Estudios Superiores Comfanorte",
     status: "Completed",
@@ -106,10 +120,11 @@ const englishEducation: readonly EducationEntry[] = [
     status: "Certified",
   },
   {
-    title: "Software Engineering",
-    institution: "Fundación de Estudios Superiores Comfanorte · Professional continuation",
-    period: "2026 — 2027",
-    status: "In progress",
+    title: "Founding.dev Design Hackathon",
+    institution: "Founding.dev · Participation and AI-assisted landing development",
+    period: "November 2026",
+    status: "Certified",
+    certificateUrl: "/documents/Jared-Bautista-Founding-Dev-Hackathon-Certificate.pdf",
   },
 ];
 
