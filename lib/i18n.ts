@@ -43,7 +43,7 @@ const spanish = {
     email: "Escribirme",
     proofLabel: "Resumen profesional",
     proofPoints: [
-      { value: "6", label: "experiencias web desplegadas" },
+      { value: "7", label: "experiencias web desplegadas" },
       { value: "1", label: "producto publicado en npm" },
       { value: "C1", label: "nivel profesional de inglés" },
     ],
@@ -155,7 +155,7 @@ const english = {
     email: "Email me",
     proofLabel: "Professional summary",
     proofPoints: [
-      { value: "6", label: "deployed web experiences" },
+      { value: "7", label: "deployed web experiences" },
       { value: "1", label: "product published on npm" },
       { value: "C1", label: "professional English level" },
     ],

@@ -105,6 +105,23 @@ export const deployedProjects = [
     accent: "peach",
   },
   {
+    slug: "dental-clinic-saas",
+    title: "Dental Clinic SaaS",
+    category: "SaaS multi-tenant · Salud & Gestión Odontológica",
+    summary:
+      "Plataforma SaaS multi-tenant para consultorios y clínicas odontológicas que centraliza la administración de clínicas, profesionales de la salud, recepcionistas, pacientes, agendas de citas, historias clínicas inmutables y odontograma digital con aislamiento completo de datos.",
+    contribution:
+      "Diseño de arquitectura multi-tenant, modelo de datos relacional en PostgreSQL con Supabase, control de acceso basado en roles (RBAC), odontograma digital interactivo, historias clínicas inmutables e interfaz responsive con Next.js y Tailwind CSS.",
+    technologies: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Zod", "Vitest"],
+    image: "/projects/dental-clinic.webp",
+    imageAlt: "Página principal de Dental Clinic SaaS con propuesta de valor para consultorios odontológicos y acceso al sistema",
+    liveUrl: "https://dental-clinic-saas-five.vercel.app/",
+    repositoryUrl: "https://github.com/JaredBautist/Dental-Clinic-SaaS",
+    kind: "deployed",
+    featured: true,
+    accent: "sky",
+  },
+  {
     slug: "metropizza",
     title: "MetroPizza",
     category: "Web comercial · Experiencia de marca",

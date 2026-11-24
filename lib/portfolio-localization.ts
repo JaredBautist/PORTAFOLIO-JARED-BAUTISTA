@@ -42,6 +42,12 @@ const englishProjectCopy: Readonly<Record<string, ProjectCopy>> = {
     contribution: "Development and configuration of the online store in Shopify.",
     imageAlt: "Cabak's public coming-soon page",
   },
+  "dental-clinic-saas": {
+    category: "Multi-tenant SaaS · Healthcare & Dental Management",
+    summary: "A multi-tenant SaaS platform for dental offices and clinics that centralizes clinic administration, dental practitioners, receptionists, patients, appointment scheduling, immutable clinical records, and a digital odontogram with complete organizational data isolation.",
+    contribution: "Multi-tenant architecture design, PostgreSQL relational data modeling with Supabase, role-based access control (RBAC), interactive digital odontogram, immutable clinical records, and responsive UI built with Next.js and Tailwind CSS.",
+    imageAlt: "Dental Clinic SaaS home page featuring its value proposition for dental clinics and practitioner sign-in",
+  },
   metropizza: {
     category: "Commercial website · Brand experience",
     summary: "Corporate website for a two-location pizzeria featuring its story, menu, gallery, reviews, local SEO, and direct ordering paths.",
