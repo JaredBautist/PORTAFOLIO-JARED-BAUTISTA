@@ -112,7 +112,7 @@ export const deployedProjects = [
       "Plataforma SaaS multi-tenant para consultorios y clínicas odontológicas que centraliza la administración de clínicas, profesionales de la salud, recepcionistas, pacientes, agendas de citas, historias clínicas inmutables y odontograma digital con aislamiento completo de datos.",
     contribution:
       "Diseño de arquitectura multi-tenant, modelo de datos relacional en PostgreSQL con Supabase, control de acceso basado en roles (RBAC), odontograma digital interactivo, historias clínicas inmutables e interfaz responsive con Next.js y Tailwind CSS.",
-    technologies: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Zod", "Vitest"],
+    technologies: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "Supabase", "PostgreSQL", "Zod", "Vitest"],
     image: "/projects/dental-clinic.webp",
     imageAlt: "Página principal de Dental Clinic SaaS con propuesta de valor para consultorios odontológicos y acceso al sistema",
     liveUrl: "https://dental-clinic-saas-five.vercel.app/",
@@ -335,6 +335,7 @@ export const technologyGroups: readonly TechnologyGroup[] = [
       { name: "Express", icon: "express", color: "#374151" },
       { name: "NestJS", icon: "nestjs", color: "#E0234E" },
       { name: "Python", icon: "python", color: "#3776AB" },
+      { name: "FastAPI", icon: "fastapi", color: "#009688" },
     ],
     practices: ["REST APIs", "JWT", "OAuth", "WebSockets", "Repository Pattern", "Dependency Injection"],
   },
